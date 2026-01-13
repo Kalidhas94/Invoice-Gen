@@ -53,7 +53,8 @@ Open the project folder in **VS Code**
 ```bash
 npm install
 
-### 3️⃣ Start Development Server
+
+## 3️⃣ Start Development Server
 npm run dev
 
 
