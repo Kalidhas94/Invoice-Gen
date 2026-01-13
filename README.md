@@ -50,9 +50,7 @@ Open the project folder in **VS Code**
 ---
 
 ### 2️⃣ Install Dependencies
-```bash
 npm install
-
 
 ## 3️⃣ Start Development Server
 npm run dev
@@ -62,7 +60,7 @@ Open browser:
 
 http://localhost:5173
 
-🖨️ Print Invoice
+## 🖨️ Print Invoice
 
 Click Print button
 
@@ -72,7 +70,7 @@ Optimized for A4 size
 
 Buttons hidden automatically during print
 
-📥 Download PDF
+## 📥 Download PDF
 
 Click Download PDF
 
@@ -81,3 +79,8 @@ Automatically downloads invoice.pdf
 Correct margins and alignment
 
 High-quality output
+
+```bash
+
+
+
