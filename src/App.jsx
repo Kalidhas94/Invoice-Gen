@@ -67,7 +67,7 @@ export default function App() {
       <div className="max-w-7xl mx-auto flex gap-6 bg-slate-400 p-6 rounded shadow print:hidden">
         {/* LEFT FORM */}
         <div className="bg-slate-300 p-6 rounded shadow w-3/4">
-          <h1 className="text-xl font-bold mb-4 text-gray-800">Invoice Generator</h1>
+          <h1 className="text-xl font-bold mb-4 text-gray-800">My Invoice Gen</h1>
 
           <div className="flex justify-between mb-4 bg-slate-600 p-4 rounded text-white">
             <p>Invoice #: {invoiceNumber}</p>
