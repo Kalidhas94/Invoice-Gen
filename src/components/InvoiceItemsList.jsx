@@ -5,8 +5,8 @@ export default function InvoiceItemsList({
   removeItem,
 }) {
   return (
-    <div className="mt-6 bg-slate-600 p-4 rounded text-white">
-      <div className="grid grid-cols-5 gap-3 font-semibold mb-2">
+    <div className="mt-6 bg-slate-600 p-4 rounded">
+      <div className="grid grid-cols-5 gap-3 font-semibold mb-2 text-white">
         <span>Item</span>
         <span>Quantity</span>
         <span>Price / Rate</span>
@@ -44,7 +44,7 @@ export default function InvoiceItemsList({
             className="border p-2 rounded"
           />
 
-          <div className="p-2" >
+          <div className="p-2 text-white">
             ₹ {(item.quantity * item.rate).toFixed(2)}
           </div>
 

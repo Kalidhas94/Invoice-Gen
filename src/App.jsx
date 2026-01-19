@@ -5,7 +5,7 @@ import html2canvas from "html2canvas";
 import CustomerForm from "./components/CustomerForm";
 import BillingForm from "./components/BillingForm";
 import InvoiceItemsList from "./components/InvoiceItemsList";
-import InvoiceSummary from "./components/InvoiceSummary";
+import InvoiceSummary from "./components/InvoiceSummary.1";
 import InvoiceControls from "./components/InvoiceControls";
 import InvoicePreview from "./components/InvoicePreview";
 
@@ -59,17 +59,12 @@ export default function App() {
   };
 
   const printInvoice = () => {
-    const win = window.open("", "", "width=900,height=650");
-    win.document.write(
-      document.getElementById("invoice-preview").innerHTML
-    );
-    win.document.close();
-    win.print();
+    window.print();
   };
 
   return (
-    <div className="bg-slate-100 min-h-screen p-6">
-      <div className="max-w-7xl mx-auto flex gap-6 bg-slate-400 p-6 rounded shadow">
+    <div className="bg-slate-100 min-h-screen p-6 print:p-0">
+      <div className="max-w-7xl mx-auto flex gap-6 bg-slate-400 p-6 rounded shadow print:hidden">
         {/* LEFT FORM */}
         <div className="bg-slate-300 p-6 rounded shadow w-3/4">
           <h1 className="text-xl font-bold mb-4 text-gray-800">Invoice Generator</h1>
@@ -114,7 +109,12 @@ export default function App() {
       </div>
 
       {/* PDF / PRINT CONTENT */}
-      <div className="hidden">
+      {/* 
+          1. We remove "hidden" so html2canvas can "see" it.
+          2. We move it off-screen with absolute positioning so it doesn't clutter the UI.
+          3. On print, we bring it back to top-left and show it.
+      */}
+      <div className="absolute top-0 left-[-9999px] print:left-0 print:top-0 print:w-full print:static print:z-50">
         <div id="invoice-preview">
           <InvoicePreview
             customer={customer}

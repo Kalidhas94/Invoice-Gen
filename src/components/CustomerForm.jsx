@@ -1,7 +1,7 @@
 export default function CustomerForm({ customer, setCustomer }) {
   return (
-    <div className="bg-slate-600 p-4 rounded text-white">
-      <h3 className="font-semibold mb-2">Customer Details</h3>
+    <div className="bg-slate-600 p-4 rounded">
+      <h3 className="font-semibold mb-2 text-white">Customer Details</h3>
 
       <input
         type="text"
